@@ -15,18 +15,19 @@
 					<header id="header">
 						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>"Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
+</h1>
             <br>
             <!-- About me button -->
-            <a href="#"><button style="color:white;width:40%" >More about me</button></a>
+            <a href="/about"><button style="color:white;width:40%" >About me</button></a>
             <!--  -->
             <br> <br>
 						<ul class="icons">
-							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://about.meta.com/technologies/facebook-app/" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://about.meta.com/technologies/instagram/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 					</header>
 
@@ -36,24 +37,29 @@
 						<!-- Thumbnails -->
 							<section class="thumbnails">
                 
-                <div>
+                 <div>
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="{{url_for('static',filename='images/thumbs/01.jpg')}}"/>
+                        <h3>0:</h3>
                       </a>
                 
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="{{url_for('static',filename='images/thumbs/02.jpg')}}" alt=""<3 :) />
+                        <h3>happiness is butterfly</h3>
                       </a>
-                </div>    
-                <div>
+                  
+               
                   <a href="">
                         <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
-                      </a>
-                </div>  
+                        <h3> hey!!</h3>
+                  </a> 
+                
+                    {% for p in post%}
+                    <img src="{{p}}" width="400px"/><br>
+                    <h3>{{post[p]}}</h3>
+                    {% endfor %}
 
+              </div>
 							</section>
 
 					</section>
@@ -62,6 +68,7 @@
 					<footer id="footer">
 						<p>&copy; MEET's (fake) Instagram. No rights reserved. 
 					</footer>
+
 
 			</div>
 
